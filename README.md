@@ -6,4 +6,4 @@
 
 ## How it works
 
-- Run `ffmpeg -i input.png -vf "colorlevels=rimin=0.99:gimin=0.99:bimin=0.99" output.png -y` to display the watermark.
+- Run `ffmpeg -i input.png -vf "curves=psfile=watermark.acv" -frames:v 1 output.png` to display the watermark.
