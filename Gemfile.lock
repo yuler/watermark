@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: adfeb791c13c1a55f3b9a46342603638ae57c7cb
+  revision: e8e077dd16f815c2a5cc4d29646d9451e7046f71
   branch: main
   specs:
     actioncable (7.2.0.alpha)
@@ -88,7 +88,7 @@ GIT
     railties (7.2.0.alpha)
       actionpack (= 7.2.0.alpha)
       activesupport (= 7.2.0.alpha)
-      irb
+      irb (~> 1.13)
       rackup (>= 1.0.0)
       rake (>= 12.2)
       thor (~> 1.0, >= 1.2.2)
@@ -101,7 +101,7 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     base64 (0.2.0)
-    bigdecimal (3.1.7)
+    bigdecimal (3.1.8)
     bindex (0.8.1)
     bootsnap (1.18.3)
       msgpack (~> 1.2)
@@ -129,7 +129,7 @@ GEM
     ffi (1.16.3)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    i18n (1.14.4)
+    i18n (1.14.5)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.2)
       mini_magick (>= 4.9.5, < 5)
@@ -139,8 +139,8 @@ GEM
       activesupport (>= 6.0.0)
       railties (>= 6.0.0)
     io-console (0.7.2)
-    irb (1.12.0)
-      rdoc
+    irb (1.13.1)
+      rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
@@ -217,7 +217,7 @@ GEM
     redis-client (0.22.0)
       connection_pool
     regexp_parser (2.9.0)
-    reline (0.5.1)
+    reline (0.5.5)
       io-console (~> 0.5)
     rexml (3.2.6)
     rubocop (1.63.1)
