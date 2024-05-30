@@ -6,13 +6,14 @@ class Task < ApplicationRecord
 
   private
     # Use ffmpeg to generate the output file
-    # `ffmpeg -i input -vf "colorlevels=rimin=0.99:gimin=0.99:bimin=0.99" output -y`
+    # `ffmpeg -i input.png -vf "curves=psfile=watermark.acv" -frames:v 1 output.png`
     def generate_output
       input.open do |file|
         output_path = file.path.sub(/\.png\z/, ".output.png")
 
         input.open do |file|
-          system("ffmpeg -i #{file.path} -vf \"colorlevels=rimin=0.99:gimin=0.99:bimin=0.99\" #{output_path} -y")
+          # Run the ffmpeg command
+          system("ffmpeg -i #{file.path} -vf \"curves=psfile=watermark.acv\" #{output_path} -y")
           # Save to output to the database
           output.attach(io: File.open(output_path), filename: File.basename(output_path))
         end

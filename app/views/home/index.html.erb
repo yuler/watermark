@@ -3,10 +3,8 @@
     <h1>Input: </h1>
     <%= form_with model: @task, data: { turbo_frame: :task } do |form| %>
       <%= form.file_field :input, accept: 'image/png', data: { controller: "file" } %>
-      <!-- <%= form.submit 'Submit', class: 'mt-4 block px-6 py-2 bg-black text-white rounded cursor-pointer' %> -->
+      <%= form.submit 'Submit', class: 'mt-4 block px-6 py-2 bg-black text-white rounded cursor-pointer' %>
     <% end %>
-
-    <%= turbo_frame_tag :task, loading: :lazy, src: task_path %>
   </div>
   <div class="flex-1 px-8 py-4 border rounded">Output: </div>
 </div>
