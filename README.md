@@ -6,4 +6,4 @@
 
 ## How it works
 
-- Run `ffmpeg -i input.png -vf "curves=psfile=watermark.acv" output%03d.png` to display the watermark.
+- Run `ffmpeg -i input.png -vf "curves=psfile=watermark.acv:interp=pchip" -update 1 output.png` to display the watermark.
