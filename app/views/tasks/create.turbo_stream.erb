@@ -1,0 +1,7 @@
+<%= turbo_stream.replace "input" do %>
+  <%= image_tag url_for(@task.input), class: "w-full" %>
+<% end %>
+
+<%= turbo_stream.replace "output" do %>
+  <%= image_tag url_for(@task.output), class: "w-full" %>
+<% end %>

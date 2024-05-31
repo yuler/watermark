@@ -8,7 +8,7 @@ class TasksController < ApplicationController
     @task.save
 
     respond_to do |format|
-      format.turbo_stream { render turbo_stream: turbo_stream.replace(@task) }
+      format.turbo_stream
       format.html { redirect_to @task }
     end
   end

@@ -5,7 +5,7 @@ export default class extends Controller {
   // input image change
   connect() {
     this.element.addEventListener("change", () => {
-      this.element.form.submit()
+      this.element.form.requestSubmit()
     })
   }
 }
