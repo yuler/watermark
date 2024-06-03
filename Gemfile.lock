@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 3aa026f6917eb4d56b9a83a5b8b6eb210c53bcaa
+  revision: 8336aa7f0bfb9f87aa510e4e7aeae08a2089d206
   branch: main
   specs:
     actioncable (8.0.0.alpha)
@@ -178,7 +178,7 @@ GEM
     minitest (5.23.1)
     msgpack (1.7.2)
     mutex_m (0.2.0)
-    net-imap (0.4.11)
+    net-imap (0.4.12)
       date
       net-protocol
     net-pop (0.1.2)
