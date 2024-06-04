@@ -1,13 +1,21 @@
-<div class="flex w-full min-h-80 gap-4">
-  <div class="flex-1 px-8 py-4 border rounded">
-    <h1>Input: </h1>
-    <%= form_with model: @task, data: { turbo_frame: :output } do |form| %>
-      <%= form.file_field :input, accept: 'image/png', data: { controller: "image" } %>
-      <turbo-frame id="input"></turbo-frame>
-    <% end %>
+<div class="flex w-full gap-4" data-controller="image-upload">
+  <div class="flex-1 px-8 py-4">
+    <h1 class="text-4xl font-bold">Input: </h1>
+    <div class="mt-8 min-h-80 border rounded">
+      <%= form_with model: @task, data: { turbo_frame: :output, image_upload_target: :form }, class: "min-h-80 cursor-pointer" do |form| %>
+        <%= form.file_field :input, accept: 'image/png', class: "hidden", data: { image_upload_target: :input } %>
+        <turbo-frame id="input">
+          <div class="h-80 flex items-center justify-center">
+            <p>Please choose image</p>
+          </div>
+        </turbo-frame>
+      <% end %>
+    </div>
   </div>
-  <div class="flex-1 px-8 py-4 border rounded">
-    <h1>Output: </h1>
-    <turbo-frame id="output"></turbo-frame>
+  <div class="flex-1 px-8 py-4 rounded">
+    <h1 class="text-3xl font-bold">Output: </h1>
+    <div class="mt-8 min-h-80 border rounded", data-image-upload-target="output">
+      <turbo-frame id="output"></turbo-frame>
+    </div>
   </div>
 </div>
