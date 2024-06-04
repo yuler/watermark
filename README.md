@@ -2,7 +2,7 @@
 
 > 显示图片水印
 
-<!-- TODO: -->
+详情请查看: https://yuler.dev/posts/create-watermark-for-web/
 
 ## How it works
 
